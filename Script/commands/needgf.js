@@ -28,7 +28,7 @@ module.exports.config = {
  name: "needgf",
  version: "1.0.4",
  hasPermssion: 0,
- credits: "Ullash api rasin",
+ credits: "MD MILON SARKAR",
  description: "সিঙ্গেলদের শেষ ভরসার ফাইল",
  usePrefix: false,
  commandCategory: "fun",
