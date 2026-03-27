@@ -26,7 +26,7 @@ module.exports.run = async function({ api, event }) {
 ┃ ❤️ 𝐑𝐞𝐥𝐚𝐭𝐢𝐨𝐧  : Pure Single 🥲 
 ┃ 🎂 𝐀𝐠𝐞       : 23+
 ┃ 🕌 𝐑𝐞𝐥𝐢𝐠𝐢𝐨𝐧  : 𝐈𝐬𝐥𝐚𝐦
-┃ 🏫 𝐄𝐝𝐮𝐜𝐚𝐭𝐢𝐨𝐧 : Job( private company)
+┃ 🏫 𝐄𝐝𝐮𝐜𝐚𝐭𝐢𝐨𝐧 : DAKHIL(SSC 2020)
 ┃ 🏡 𝐀𝐝𝐝𝐫𝐞𝐬𝐬  : Kurigram, Bangladesh 
 ┣━━━━━━━━━━━━━━━━━━━━━┫
 ┃ 💬 Massanger  : m.me/┃100081225144815
