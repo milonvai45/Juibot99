@@ -48,7 +48,7 @@ module.exports.handleEvent = async function ({ api, event }) {
     "bot er baccha": "আমার বাচ্চা তো তোমার গার্লফ্রেন্ডের পেটে..!!🌚⛏️",
     "tor nam ki": "MY NAME IS ─꯭─⃝‌‌মিঁলঁনেঁর ফেঁমাঁসঁ বঁটঁ💖",
     "pic de": "এন থেকে সর দুরে গিয়া মর😒",
-    "cudi": "এসব বাজে কথা বলো না..!🥱🌝🌚",
+    "tor boss ke": "𝑶𝒏𝒍𝒚 𝑴𝒊𝒍𝒐𝒏 𝑩𝒐𝒔𝒔..বসের আইডি লিংক https://www.facebook.com/share/1CNLskKAtw/",
     "bal": "রাগ করে না সোনা পাখি 🥰",
     "heda": "এতো রাগ শরীরের জন্য ভালো না 🥰",
     "🤣": "ভাই তুই এত হাসিস না..!🌚🤣",
