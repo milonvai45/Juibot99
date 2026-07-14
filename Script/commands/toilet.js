@@ -1,12 +1,21 @@
 module.exports.config = {
   name: "toilet",
   version: "1.0.0",
-  credits: "SHAHADAT SAHU",
+  credits: "SHAHADAT SAHU + fixed by 𝕸𝖎𝖑𝖔𝖓",
   description: "Generate a couple banner image using sender and target Facebook UID via Avatar Canvas API",
   commandCategory: "banner",
   usePrefix: true,
   usages: "[@mention | reply]",
   cooldowns: 5
+};
+
+// baseApiUrl function to fetch dynamic API endpoint
+const baseApiUrl = async () => {
+  const axios = require("axios");
+  const base = await axios.get(
+    "https://raw.githubusercontent.com/mahmudx7/HINATA/main/baseApiUrl.json"
+  );
+  return base.data.mahmud;
 };
 
 module.exports.run = async function ({ api, event, args, Currencies }) {
@@ -15,12 +24,6 @@ module.exports.run = async function ({ api, event, args, Currencies }) {
   const path = require("path");
 
   try {
-    const apiList = await axios.get(
-      "https://raw.githubusercontent.com/shahadat-sahu/SAHU-API/refs/heads/main/SAHU-API.json"
-    );
-
-    const AVATAR_CANVAS_API = apiList.data.AvatarCanvas;
-
     const mentions = event.mentions;
     const messageReply = event.messageReply;
 
@@ -42,24 +45,29 @@ module.exports.run = async function ({ api, event, args, Currencies }) {
     const randomAmount = Math.floor(Math.random() * 100000) + 100000;
     await Currencies.increaseMoney(senderID, parseInt(randomPercent * randomAmount));
 
-    const res = await axios.post(
-      `${AVATAR_CANVAS_API}/api`,
-      {
-        cmd: "toilet",
-        uid: targetID
-      },
+    // Dynamic base API fetches here
+    const apiUrl = await baseApiUrl();
+
+    const res = await axios.get(
+      `${apiUrl}/api/toilet?user=${targetID}`,
       {
         responseType: "arraybuffer",
         timeout: 30000
       }
     );
 
-    const imgPath = path.join(__dirname, "cache", `toilet_${targetID}.png`);
+    // Ensure cache directory exists
+    const cacheDir = path.join(__dirname, "cache");
+    if (!fs.existsSync(cacheDir)) {
+      fs.mkdirSync(cacheDir, { recursive: true });
+    }
+
+    const imgPath = path.join(cacheDir, `toilet_${targetID}.png`);
     fs.writeFileSync(imgPath, res.data);
 
     return api.sendMessage(
       {
-        body: "বেশি বাল পাকলামির জন্য তোরে টয়লেটে ফেলে দিলাম🤣🤮",
+        body: "তোর জন্য উপযুক্ত জায়গা 🤣🤮",
         attachment: fs.createReadStream(imgPath)
       },
       event.threadID,
@@ -68,6 +76,6 @@ module.exports.run = async function ({ api, event, args, Currencies }) {
     );
 
   } catch (e) {
-    return api.sendMessage("API Error Call Boss SAHU", event.threadID, event.messageID);
+    return api.sendMessage("API Error Call Boss MILON", event.threadID, event.messageID);
   }
 };
