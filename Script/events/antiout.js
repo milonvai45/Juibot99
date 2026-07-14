@@ -15,7 +15,7 @@ module.exports.run = async({ event, api, Threads, Users }) => {
  if (type == "self-separation") {
   api.addUserToGroup(event.logMessageData.leftParticipantFbId, event.threadID, (error, info) => {
    if (error) {
-    api.sendMessage(`সরি বস, ${name} কে আবার এড করতে পারলাম না। 
+    api.sendMessage(`সরি মিলন বস, ${name} কে আবার এড করতে পারলাম না। 
 সম্ভবত উনি বটকে ব্লক করেছে অথবা তার প্রাইভেসি সেটিংসের কারণে এড করা যায় না। 
 \n──────꯭─⃝‌‌মিঁলঁনেঁরঁ ফেঁমাঁসঁ বঁটঁ─────`, event.threadID)
    } else api.sendMessage(`শোন, ${name}, এই গ্রুপ হইলো গ্যাং!
