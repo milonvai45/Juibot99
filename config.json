@@ -12,15 +12,15 @@
   "PASSWORD": "your password",
   "OTPKEY": "",
   "BOTNAME": "─꯭─⃝‌‌মিঁলঁনেঁরঁ ফেঁমাঁসঁ বঁটঁ",
-  "PREFIX": "!",
+  "PREFIX": "#",
   "reactUnsend": ["😡", "🤧", "😤", "😠"],
 
   "ADMINBOT": [
-    "100081225144815",
-    "61581637891369",
+    "61593943674779",
+    "61583718843620",
     "100060494911394"
   ],
-  "NDH": ["100081225144815"],
+  "NDH": ["61593943674779"],
   "adminOnly": false,
   "ndhOnly": false,
   "adminPaOnly": false,
